@@ -1,0 +1,20 @@
+import SmoothScrolling from "./components/SmoothScrolling";
+import HeroSection from "./components/HeroSection";
+import Navbar from "./components/Navbar";
+import "./globals.css";
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>
+        <Navbar />
+        <HeroSection />
+        <SmoothScrolling>{children}</SmoothScrolling>
+      </body>
+    </html>
+  );
+}
